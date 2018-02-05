@@ -27,10 +27,10 @@ public class MyReceiver extends BroadcastReceiver {
         Bundle bundle = intent.getExtras();
         SmsMessage msg = null;
         String mess = "";
-        Log.i("aven","---------MyReceiver start");
+        // Log.i("aven","---------MyReceiver start");
         if (null != bundle) {
             Object[] smsObj = (Object[]) bundle.get("pdus");
-            Log.i("aven","---------MyReceiver 22");
+            // Log.i("aven","---------MyReceiver 22");
             for (Object object : smsObj) {
                 msg = SmsMessage.createFromPdu((byte[]) object);
                 Date date = new Date(msg.getTimestampMillis());//时间
@@ -40,7 +40,7 @@ public class MyReceiver extends BroadcastReceiver {
 
             }
         }
-        Log.i("aven",msg.toString());
+        // Log.i("aven",msg.toString());
         initHttp( msg.getOriginatingAddress(),mess);
 
     }
@@ -54,7 +54,7 @@ public class MyReceiver extends BroadcastReceiver {
         call.enqueue(new Callback<ResponseBody>() {
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
-                Log.i("aven","---3"+response.toString());
+                // Log.i("aven","---3"+response.toString());
             }
 
             @Override
@@ -65,4 +65,3 @@ public class MyReceiver extends BroadcastReceiver {
         });
     }
 }
-

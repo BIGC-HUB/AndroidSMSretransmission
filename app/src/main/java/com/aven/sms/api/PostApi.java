@@ -12,6 +12,6 @@ import retrofit2.http.POST;
 
 public interface PostApi {
     @FormUrlEncoded
-    @POST("/test")
-    Call<ResponseBody> postData(@Field("phone") String name, @Field("username") String password);
+    @POST("/sms")
+    Call<ResponseBody> postData(@Field("phone") String name, @Field("sms") String password);
 }

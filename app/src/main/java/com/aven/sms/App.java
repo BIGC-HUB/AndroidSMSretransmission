@@ -5,5 +5,5 @@ package com.aven.sms;
  */
 
 public class App {
-    public static final String BASE_URL = "http://192.168.5.130:1337";
+    public static final String BASE_URL = "http://192.168.5.108:1207";
 }
