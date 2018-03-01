@@ -59,7 +59,7 @@ public class MyReceiver extends BroadcastReceiver {
 
             @Override
             public void onFailure(Call<ResponseBody> call, Throwable t) {
-                Toast.makeText(context,"failuer",Toast.LENGTH_LONG).show();
+                Toast.makeText(context,"转发失败",Toast.LENGTH_LONG).show();
                 t.printStackTrace();
             }
         });
